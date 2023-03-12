@@ -1,0 +1,153 @@
+html{
+    font-size: 10px;
+}
+
+
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: 'Press Start 2P', cursive;
+    color: gold;
+
+}
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+}
+
+h1{
+    font-size: 3em;
+}
+
+summary{
+    display: block;
+    border-top: solid rgba(226, 10, 208, 0.603) 1px;
+    padding: 2vh 0;
+    font-size: 2em;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+
+}
+
+
+
+summary::-webkit-details-marker {
+    display: none;
+}
+details{
+    text-align: center;
+    cursor: pointer;
+    transition: height 1s ease;
+    overflow: hidden;
+}
+summary:hover::after {
+    content: '\25BC';
+    padding-left: 90%;
+    display: block;
+    width: 5PX;
+  }
+  details[open] > summary:hover::after {
+    content: '\25B2';
+    padding-left: 90%;
+    display: block;
+    width: 5PX;
+  }
+
+  details:not([open]){
+      height: 10vh;
+  }
+  
+  details[open]{
+      height: 60vh;
+  }
+
+
+
+img{
+    max-width: 40vw;
+    transition: 0.3s;
+    max-height: 70%;
+    transition: 1.3s;
+}
+
+
+.container:hover{
+    color: blue;
+}
+
+
+@media (max-width: 830px) { 
+
+        .wrapper{
+            width: 60vw;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+
+        summary{
+            display: block;
+            cursor: none;
+        }
+
+        details:not([open]){
+            height: 8vh;
+        }
+        
+        details[open]{
+            height: 50vh;
+        }
+
+        img{
+            max-width: 60vw;
+            transition: 0.3s;
+            max-height: 70%;
+        }
+        
+
+        summary::after {
+            content: '\25BC';
+            padding-left: 90%;
+            display: block;
+            width: 5PX;
+          }
+          details[open] > summary::after {
+            content: '\25B2';
+            padding-left: 90%;
+            display: block;
+            width: 5PX;
+          }
+
+      
+ }
+
+ @media (max-width: 350px) { 
+
+    .wrapper{
+        width: 90vw;
+    }
+    h1{
+        font-size: 2.4em;
+    }
+
+    summary{
+        display: block;
+        font-size: 1.5em;
+    }
+
+    details:not([open]){
+        height: 8vh;
+    }
+    
+    details[open]{
+        height: 50vh;
+    }
+
+    img{
+        max-width: 90vw;
+        transition: 0.3s;
+        max-height: 70%;
+    }
+    
+}
