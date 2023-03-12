@@ -15,15 +15,18 @@ body{
     width: 40vw;
 }
 
+h1{
+    font-size: 3em;
+}
+
 summary{
     display: block;
     border-top: solid rgba(226, 10, 208, 0.603) 1px;
     padding: 2vh 0;
-    font-size: 1.5em;
-    width: 40vw;
+    font-size: 2em;
+    width: 100%;
     text-align: left;
     cursor: pointer;
-    /* transition: all 0.5s 1s; */
 
 }
 
@@ -41,35 +44,110 @@ details{
 summary:hover::after {
     content: '\25BC';
     padding-left: 90%;
+    display: block;
+    width: 5PX;
+  }
+  details[open] > summary:hover::after {
+    content: '\25B2';
+    padding-left: 90%;
+    display: block;
+    width: 5PX;
   }
 
-
   details:not([open]){
-      height: 7vh;
+      height: 10vh;
   }
   
   details[open]{
-      height: 80vh;
+      height: 60vh;
   }
 
-details[open] > summary:hover::after {
-    content: '\25B2';
-    padding-left: 90%;
-    
-  }
+
 
 img{
-    max-width: 20vw;
+    max-width: 40vw;
     transition: 0.3s;
+    max-height: 70%;
+    transition: 1.3s;
 }
 
-img:hover{
-    max-width: 22vw;
-
-}
 
 .container:hover{
     color: blue;
 }
 
 
+@media (max-width: 830px) { 
+
+        .wrapper{
+            width: 60vw;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+
+        summary{
+            display: block;
+            cursor: none;
+        }
+
+        details:not([open]){
+            height: 8vh;
+        }
+        
+        details[open]{
+            height: 50vh;
+        }
+
+        img{
+            max-width: 60vw;
+            transition: 0.3s;
+            max-height: 70%;
+        }
+        
+
+        summary::after {
+            content: '\25BC';
+            padding-left: 90%;
+            display: block;
+            width: 5PX;
+          }
+          details[open] > summary::after {
+            content: '\25B2';
+            padding-left: 90%;
+            display: block;
+            width: 5PX;
+          }
+
+      
+ }
+
+ @media (max-width: 350px) { 
+
+    .wrapper{
+        width: 90vw;
+    }
+    h1{
+        font-size: 2.4em;
+    }
+
+    summary{
+        display: block;
+        font-size: 1.5em;
+    }
+
+    details:not([open]){
+        height: 8vh;
+    }
+    
+    details[open]{
+        height: 50vh;
+    }
+
+    img{
+        max-width: 90vw;
+        transition: 0.3s;
+        max-height: 70%;
+    }
+    
+}
